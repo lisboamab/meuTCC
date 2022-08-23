@@ -2,13 +2,13 @@ from re import M
 from pyfirmata import Arduino, util
 from datetime import datetime
 
-# Uno = Arduino('') #Colocar a porta USB do Arduino
+Uno = Arduino('') #Colocar a porta USB do Arduino
 
 repeticao = 1
 contador = 0
 
 while True:
-    if not True:
+    if not Uno.digital[8].read:
         contador += 1
     tempoInicial = datetime.now()
     tempoInicial = tempoInicial.strftime("%H:%M:%S")

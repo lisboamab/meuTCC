@@ -1,1 +1,1 @@
-Repeticao;Contador;Tempo;Velocidade(KM/h);DE
+Repeticao;Parcela;Tempo;Velocidade(KM/h);DE
