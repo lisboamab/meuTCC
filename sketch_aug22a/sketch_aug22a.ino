@@ -1,6 +1,14 @@
-#define pinSensor1 7
+#include <Boards.h>
+#include <Firmata.h>
+#include <FirmataConstants.h>
+#include <FirmataDefines.h>
+#include <FirmataMarshaller.h>
+#include <FirmataParser.h>
 
-int contador = 0;
+#define pinSensor1 8
+
+bool s_high = 0;
+unsigned long contador = 0;
 
 void setup() {
 
@@ -9,14 +17,13 @@ void setup() {
 }
 
 void loop(){
+  if(digitalRead(pinSensor1)) s_high = 1 ;
 
-    bool estadoSensor1 = digitalRead(pinSensor1);
-
-    if (estadoSensor1){
-        contador += 0;
-    } else{ 
-        contador += 1;
-    }
-
+  if(!digitalRead(pinSensor1) && s_high)
+  {
+    s_high = 0;
+    contador += 1;
     Serial.println(contador);
+  };
+
 }
