@@ -35,6 +35,6 @@ while True:
 
         
 
-        # arquivo = open("MeusDados.txt", "a")
-        # arquivo.write(linhaDeDado)
-        # arquivo.close
+        arquivo = open("MeusDados.txt", "a")
+        arquivo.write(linhaDeDado)
+        arquivo.close
