@@ -1,1 +1,8 @@
-Repeticao;Parcela;Tempo;Velocidade(KM/h);DE
+Repeticao;Parcela;Tempo;Velocidade(KM/h);DE1;1;23:37:12;7;DE
+1;2;23:37:13;7;DE
+1;3;23:37:14;7;DE
+1;4;23:37:15;7;DE
+1;5;23:37:16;7;DE
+1;6;23:37:18;7;DE
+1;7;23:37:19;7;DE
+1;8;23:37:21;7;DE
