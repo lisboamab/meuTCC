@@ -51,21 +51,25 @@ for i, k in zip(tratamentos, nomes_tratamentos):
     aceitavel, duplo, nulo = 0, 0, 0
     
 
-# barWidth = 0.25
+freq_aceitavel = [71.25, 73.54, 63.33]
+freq_duplo = [27.92, 17.08, 4.38]
+freq_nulo = [0.83, 9.38, 32.29]
+barWidth = 0.25
 
-# plt.figure(figsize=(10,5))
+plt.figure(figsize=(10,5))
 
-# r1 = np.arange(len(iso_trat1))
-# r2 = [x + barWidth for x in r1]
-# r3 = [x + barWidth for x in r2]
+r1 = np.arange(len(freq_aceitavel))
+r2 = [x + barWidth for x in r1]
+r3 = [x + barWidth for x in r2]
 
-# plt.bar(r1, iso_trat1, color= '#6A5ACD', width=barWidth, label='1.08')
-# plt.bar(r2, iso_trat2, color= '#6495ED', width=barWidth, label='3.2')
-# plt.bar(r3, iso_trat3,  color= '#00BFFF', width=barWidth, label='4.8')
+plt.bar(r1, freq_aceitavel, color= '#6A5ACD', width=barWidth, label='Aceitável')
+plt.bar(r2, freq_duplo, color= '#6495ED', width=barWidth, label='Duplo')
+plt.bar(r3, freq_nulo,  color= '#00BFFF', width=barWidth, label='Nulo')
 
-# plt.xlabel('Velocidade (Km/H)')
-# plt.xticks([r + barWidth for r in range(len(iso_trat1))], ['1.08', '3.2', '4.8'])
-# plt.ylabel('Frequencia')
+plt.xlabel('Velocidade (Km/H)')
+plt.xticks([r + barWidth for r in range(len(freq_aceitavel))], ['1.08', '3.2', '4.8'])
+plt.ylabel('Frequencia (%)')
+plt.ylim([0, 100])
 
-# plt.legend()
-# plt.show()
+plt.legend()
+plt.show()
